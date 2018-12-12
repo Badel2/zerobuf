@@ -1,6 +1,10 @@
 # zerobuf
 A growable chunk of zeroed memory
 
+[![Crates.io](https://img.shields.io/crates/v/zerobuf.svg)](https://crates.io/crates/zerobuf)
+![License MIT-APACHE](https://img.shields.io/github/license/badel2/zerobuf.svg)
+[![Build Status](https://travis-ci.org/Badel2/zerobuf.svg?branch=master)](https://travis-ci.org/Badel2/zerobuf)
+
 Like a `Vec` where `len == capacity`.
 It can be used as an alternative to a `Vec` when the length is controlled externally.
 `RawVec` but the memory is always initializated.
