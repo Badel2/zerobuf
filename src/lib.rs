@@ -333,6 +333,28 @@ impl<T, P: Params<T>> ops::DerefMut for ZeroBuf<T, P> {
     }
 }
 
+impl<T, I> ops::Index<I> for ZeroBuf<T>
+where
+    I: slice::SliceIndex<[T]>,
+{
+    type Output = I::Output;
+
+    #[inline]
+    fn index(&self, index: I) -> &Self::Output {
+        ops::Index::index(&**self, index)
+    }
+}
+
+impl<T, I> ops::IndexMut<I> for ZeroBuf<T>
+where
+    I: slice::SliceIndex<[T]>,
+{
+    #[inline]
+    fn index_mut(&mut self, index: I) -> &mut Self::Output {
+        ops::IndexMut::index_mut(&mut **self, index)
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
