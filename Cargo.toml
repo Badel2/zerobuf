@@ -9,5 +9,6 @@ A growable chunk of zeroed memory.
 repository = "https://github.com/badel2/zerobuf"
 documentation = "https://docs.rs/zerobuf"
 keywords = ["raw-vec", "zero", "buffer", "vector"]
+readme = "README.md"
 
 [dependencies]
