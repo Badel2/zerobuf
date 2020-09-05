@@ -388,7 +388,6 @@ mod tests {
         use std::rc::Rc;
         assert_eq!(check_what_is_zero::<Option<Rc<String>>>(), None);
         assert_eq!(check_what_is_zero::<Option<String>>(), None);
-        assert_eq!(check_what_is_zero::<String>(), String::new());
         assert_eq!(check_what_is_zero::<Option<Vec<u8>>>(), None);
     }
 
